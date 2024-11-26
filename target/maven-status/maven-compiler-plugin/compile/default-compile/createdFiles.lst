@@ -1,4 +1,9 @@
+com\mycompany\zapasoft\agregarProveedorController.class
 com\mycompany\zapasoft\App.class
+com\mycompany\zapasoft\editarProveedorController.class
+com\mycompany\zapasoft\Conexion.class
+com\mycompany\zapasoft\proveedoresController.class
 module-info.class
-com\mycompany\zapasoft\SecondaryController.class
-com\mycompany\zapasoft\PrimaryController.class
+com\mycompany\zapasoft\confirmacionProveedorController.class
+com\mycompany\zapasoft\Proveedor.class
+com\mycompany\zapasoft\dashBoardController.class

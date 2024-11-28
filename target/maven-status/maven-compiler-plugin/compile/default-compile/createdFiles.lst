@@ -1,3 +1,5 @@
+com\mycompany\zapasoft\agregarProductoController.class
+com\mycompany\zapasoft\confirmacionProductoController.class
 com\mycompany\zapasoft\editarProveedorController.class
 com\mycompany\zapasoft\Conexion.class
 com\mycompany\zapasoft\empleadosController.class
@@ -5,10 +7,13 @@ com\mycompany\zapasoft\confirmacionEmpleadoController.class
 com\mycompany\zapasoft\proveedoresController.class
 module-info.class
 com\mycompany\zapasoft\confirmacionProveedorController.class
+com\mycompany\zapasoft\productosController.class
 com\mycompany\zapasoft\Proveedor.class
 com\mycompany\zapasoft\agregarProveedorController.class
 com\mycompany\zapasoft\App.class
 com\mycompany\zapasoft\editarEmpleadoController.class
+com\mycompany\zapasoft\editarProductoController.class
 com\mycompany\zapasoft\Empleado.class
+com\mycompany\zapasoft\Producto.class
 com\mycompany\zapasoft\agregarEmpleadoController.class
 com\mycompany\zapasoft\dashBoardController.class

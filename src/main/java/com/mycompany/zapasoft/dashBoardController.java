@@ -35,7 +35,7 @@ public class dashBoardController {
             case "ventas":
                 return "";
             case "productos":
-                return "";
+                return "productos";
             default:
                 return null;
         }

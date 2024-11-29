@@ -31,7 +31,7 @@ public class dashBoardController {
             case "empleados":
                 return "empleados";
             case "compras":
-                return "";
+                return "compras";
             case "ventas":
                 return "";
             case "productos":

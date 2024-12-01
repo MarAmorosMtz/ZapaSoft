@@ -1,7 +1,10 @@
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\agregarCompraController.java
+D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\editarVentaController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\agregarProveedorController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\dashBoardController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\empleadosController.java
+D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\Venta.java
+D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\agregarVentaController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\agregarEmpleadoController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\productosController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\Compra.java
@@ -11,9 +14,11 @@ D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\editarCompraController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\editarProveedorController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\agregarProductoController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\Producto.java
+D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\ventaController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\Conexion.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\Proveedor.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\confirmacionProveedorController.java
+D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\confirmacionVentaController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\compraController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\proveedoresController.java
 D:\ZapaSoft\src\main\java\com\mycompany\zapasoft\Empleado.java

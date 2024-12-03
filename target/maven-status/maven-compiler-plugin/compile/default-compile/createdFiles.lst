@@ -15,6 +15,7 @@ com\mycompany\zapasoft\Empleado.class
 com\mycompany\zapasoft\agregarEmpleadoController.class
 com\mycompany\zapasoft\compraController.class
 com\mycompany\zapasoft\agregarProductoController.class
+com\mycompany\zapasoft\loginController.class
 com\mycompany\zapasoft\confirmacionEmpleadoController.class
 com\mycompany\zapasoft\proveedoresController.class
 module-info.class

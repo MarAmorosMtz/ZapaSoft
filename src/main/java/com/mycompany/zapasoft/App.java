@@ -14,11 +14,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("dashBoard"));
+        scene = new Scene(loadFXML("login"));
         stage.setScene(scene);
         stage.setTitle("Zapateria");
         stage.setScene(scene);
-        stage.setMaximized(true);
+        stage.setMaximized(false);
         stage.setResizable(false);
         stage.show();
     }

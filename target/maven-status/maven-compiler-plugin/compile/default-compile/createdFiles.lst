@@ -15,7 +15,9 @@ com\mycompany\zapasoft\App.class
 com\mycompany\zapasoft\Compra.class
 com\mycompany\zapasoft\detalleVenta.class
 com\mycompany\zapasoft\editarProductoController.class
+com\mycompany\zapasoft\detalleCompra.class
 com\mycompany\zapasoft\Empleado.class
+com\mycompany\zapasoft\agregarDetalleCompra.class
 com\mycompany\zapasoft\agregarEmpleadoController.class
 com\mycompany\zapasoft\compraController.class
 com\mycompany\zapasoft\agregarProductoController.class
@@ -25,8 +27,10 @@ com\mycompany\zapasoft\proveedoresController.class
 module-info.class
 com\mycompany\zapasoft\confirmacionProveedorController.class
 com\mycompany\zapasoft\Proveedor.class
+com\mycompany\zapasoft\detalleDCompraController.class
 com\mycompany\zapasoft\agregarProveedorController.class
 com\mycompany\zapasoft\comprasController.class
+com\mycompany\zapasoft\editarDetalleCompra.class
 com\mycompany\zapasoft\editarEmpleadoController.class
 com\mycompany\zapasoft\editarVentaController.class
 com\mycompany\zapasoft\Producto.class

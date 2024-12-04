@@ -19,6 +19,7 @@
                   <Button fx:id="compras" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="230.0" text="COMPRAS" />
                   <Button fx:id="ventas" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="230.0" text="VENTAS" />
                   <Button fx:id="dventa" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="230.0" text="Detalle Ventas" />
+                  <Button fx:id="dcompra" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="230.0" text="Detalle Compras" />
                </children>
                <HBox.margin>
                   <Insets />

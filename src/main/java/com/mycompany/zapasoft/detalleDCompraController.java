@@ -14,38 +14,39 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class detalleVController {
+public class detalleDCompraController {
 
     @FXML
-    private TableView<detalleVenta> tablaVentas;
+    private TableView<detalleCompra> tablaVentas;
 
     @FXML
-    private TableColumn<detalleVenta, Short> numv;
+    private TableColumn<detalleCompra, Short> numv;
 
     @FXML
-    private TableColumn<detalleVenta, Short> empleado;
+    private TableColumn<detalleCompra, Float> totalDeCompra;
 
     @FXML
-    private TableColumn<detalleVenta, Float> total;
+    private TableColumn<detalleCompra, Float> precio;
 
     @FXML
-    private TableColumn<detalleVenta, Float> precio;
+    private TableColumn<detalleCompra, Float> costo;
 
     @FXML
-    private TableColumn<detalleVenta, Float> costo;
+    private TableColumn<detalleCompra, String> metodoDePago;
 
     @FXML
-    private TableColumn<detalleVenta, String> metodo;
+    private TableColumn<detalleCompra, Short> cantidad;
 
     @FXML
-    private TableColumn<detalleVenta, Short> cantidad;
+    private TableColumn<detalleCompra, Short> idProductos;
 
     @FXML
-    private TableColumn<detalleVenta, Short> foliov;
+    private TableColumn<detalleCompra, Short> folioC;
 
     @FXML
     public void initialize() {
@@ -53,36 +54,36 @@ public class detalleVController {
 
         if (conn != null) {
             try {
-                String sql = "SELECT * FROM detalledeventas";
+                String sql = "SELECT * FROM detalledecompras";
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql);
 
-                ObservableList<detalleVenta> detalles = FXCollections.observableArrayList();
+                ObservableList<detalleCompra> detalles = FXCollections.observableArrayList();
 
                 while (rs.next()) {
-                    detalleVenta detalle = new detalleVenta(
-                        rs.getShort("NUMV"),
-                        rs.getShort("IdPRODUCTOS"),
-                        rs.getFloat("TOTALDEVENTA"),
+                    detalleCompra detalle = new detalleCompra(
+                        rs.getShort("NUMC"),
+                        rs.getFloat("TOTALDECOMPRA"),
                         rs.getFloat("PRECIO"),
                         rs.getFloat("COSTO"),
-                        rs.getString("METODODEPAGO").charAt(0),
+                        rs.getString("METODODEPAGO"),
                         rs.getShort("CANTIDAD"),
-                        rs.getShort("FOLIOV")
+                        rs.getShort("IdPRODUCTOS"),
+                        rs.getShort("FOLIOC")
                     );
 
                     detalles.add(detalle);
                 }
 
                 // Configurar columnas
-                numv.setCellValueFactory(new PropertyValueFactory<>("numv"));
-                empleado.setCellValueFactory(new PropertyValueFactory<>("idProductos"));
-                total.setCellValueFactory(new PropertyValueFactory<>("totalDeVenta"));
+                numv.setCellValueFactory(new PropertyValueFactory<>("numc"));
+                totalDeCompra.setCellValueFactory(new PropertyValueFactory<>("totalDeCompra"));
                 precio.setCellValueFactory(new PropertyValueFactory<>("precio"));
                 costo.setCellValueFactory(new PropertyValueFactory<>("costo"));
-                metodo.setCellValueFactory(new PropertyValueFactory<>("metodoDePago"));
+                metodoDePago.setCellValueFactory(new PropertyValueFactory<>("metodoDePago"));
                 cantidad.setCellValueFactory(new PropertyValueFactory<>("cantidad"));
-                foliov.setCellValueFactory(new PropertyValueFactory<>("folioV"));
+                idProductos.setCellValueFactory(new PropertyValueFactory<>("idProductos"));
+                folioC.setCellValueFactory(new PropertyValueFactory<>("folioC"));
 
                 // Asignar datos a la tabla
                 tablaVentas.setItems(detalles);
@@ -97,9 +98,8 @@ public class detalleVController {
 
     @FXML
     private void agregar() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("editarDVenta.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("agregarDCompra.fxml"));
         Parent parent = loader.load();
-
 
         Scene scene = new Scene(parent);
         Stage stage = new Stage();
@@ -111,35 +111,41 @@ public class detalleVController {
     }
 
     @FXML
-    private void editar() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("editarDVenta.fxml"));
-        Parent parent = loader.load();
+private void editar() throws IOException {
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("editarDCompra.fxml"));
+    Parent parent = loader.load();
 
-        int rowIndex = tablaVentas.getSelectionModel().getSelectedIndex();
+    // Obtener la fila seleccionada de la tabla
+    int rowIndex = tablaVentas.getSelectionModel().getSelectedIndex();
 
-        if (rowIndex != -1) {
-            detalleVenta detalle = tablaVentas.getItems().get(rowIndex);
+    if (rowIndex != -1) {
+        // Obtener el objeto detalleCompra seleccionado
+        detalleCompra detalle = tablaVentas.getItems().get(rowIndex);
 
-            editDVenta editController = loader.getController();
-            editController.setModel(detalle);
+        // Pasar los datos al controlador de la ventana de edición
+        editarDetalleCompra editController = loader.getController();
+        editController.setModel(detalle);
 
-            Stage stage = new Stage();
-            stage.setScene(new Scene(parent));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false);
-            stage.setMaximized(false);
-            stage.show();
-        }
+        // Configurar la nueva ventana de edición
+        Stage stage = new Stage();
+        stage.setScene(new Scene(parent));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setResizable(false);
+        stage.setMaximized(false);
+        stage.show();
+    } else {
+        System.out.println("No se ha seleccionado ninguna fila.");
     }
+}
 
     @FXML
-private void borrar() {
+    private void borrar() {
     // Obtener el índice seleccionado
     int rowIndex = tablaVentas.getSelectionModel().getSelectedIndex();
 
     if (rowIndex != -1) {
-        // Obtener el detalleVenta seleccionado
-        detalleVenta detalle = tablaVentas.getItems().get(rowIndex);
+        // Obtener el detalleCompra seleccionado
+        detalleCompra detalle = tablaVentas.getItems().get(rowIndex);
 
         // Confirmación para borrar (opcional, aquí comentado para simplicidad)
         // Mostrar ventana de confirmación, por ejemplo, usando Alert
@@ -148,9 +154,9 @@ private void borrar() {
         Connection conn = Conexion.connect();
         if (conn != null) {
             try {
-                String sql = "DELETE FROM detalledeventas WHERE NUMV = ?";
-                java.sql.PreparedStatement pstmt = conn.prepareStatement(sql);
-                pstmt.setShort(1, detalle.getNumv()); // Aquí usas la clave primaria o identificador único
+                String sql = "DELETE FROM detalledecompras WHERE NUMC = ?";
+                PreparedStatement pstmt = conn.prepareStatement(sql);
+                pstmt.setString(1, String.valueOf(detalle.getNumc()));
                 pstmt.executeUpdate();
 
                 // Eliminar el ítem de la tabla

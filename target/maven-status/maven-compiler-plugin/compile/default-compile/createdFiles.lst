@@ -3,13 +3,17 @@ com\mycompany\zapasoft\confirmacionProductoController.class
 com\mycompany\zapasoft\editarProveedorController.class
 com\mycompany\zapasoft\Venta.class
 com\mycompany\zapasoft\agregarCompraController.class
+com\mycompany\zapasoft\editDVenta.class
 com\mycompany\zapasoft\Conexion.class
+com\mycompany\zapasoft\detalleVController.class
 com\mycompany\zapasoft\empleadosController.class
+com\mycompany\zapasoft\addDVenta.class
 com\mycompany\zapasoft\confirmacionVentaController.class
 com\mycompany\zapasoft\productosController.class
 com\mycompany\zapasoft\agregarVentaController.class
 com\mycompany\zapasoft\App.class
 com\mycompany\zapasoft\Compra.class
+com\mycompany\zapasoft\detalleVenta.class
 com\mycompany\zapasoft\editarProductoController.class
 com\mycompany\zapasoft\Empleado.class
 com\mycompany\zapasoft\agregarEmpleadoController.class

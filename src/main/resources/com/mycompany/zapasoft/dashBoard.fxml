@@ -13,11 +13,12 @@
          <children>
             <VBox alignment="CENTER" prefHeight="720.0" prefWidth="223.0" styleClass="vBox">
                <children>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="69.0" prefWidth="230.0" text="PROVEEDORES" fx:id="proveedores" onAction="#handleButtonAction" />
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="69.0" prefWidth="230.0" text="EMPLEADOS" fx:id="empleados" onAction="#handleButtonAction"/>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="69.0" prefWidth="230.0" text="PRODUCTOS" fx:id="productos" onAction="#handleButtonAction"/>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="69.0" prefWidth="230.0" text="COMPRAS" fx:id="compras" onAction="#handleButtonAction"/>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="69.0" prefWidth="230.0" text="VENTAS" fx:id="ventas" onAction="#handleButtonAction"/>
+                  <Button fx:id="proveedores" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="230.0" text="PROVEEDORES" />
+                  <Button fx:id="empleados" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="230.0" text="EMPLEADOS" />
+                  <Button fx:id="productos" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="230.0" text="PRODUCTOS" />
+                  <Button fx:id="compras" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="230.0" text="COMPRAS" />
+                  <Button fx:id="ventas" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="230.0" text="VENTAS" />
+                  <Button fx:id="dventa" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="230.0" text="Detalle Ventas" />
                </children>
                <HBox.margin>
                   <Insets />
@@ -30,7 +31,7 @@
                         <Label prefHeight="64.0" prefWidth="271.0" text="Zapateria" />
                      </children>
                   </HBox>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="anchorPane" VBox.vgrow="ALWAYS" fx:id="vista" />
+                  <AnchorPane fx:id="vista" prefHeight="200.0" prefWidth="200.0" styleClass="anchorPane" VBox.vgrow="ALWAYS" />
                </children>
             </VBox>
          </children>
